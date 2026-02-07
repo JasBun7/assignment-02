@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NorthStar Study Club | Join</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">★</span>
+        <span class="brand-text">NorthStar Study Club</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link is-active" href="contact.html">Join</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1>Join the club</h1>
+        <p class="lead">
+          Fill out the form and we'll send session times and next steps.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="two-col">
+          <section aria-label="Join form">
+            <h2>Sign-up form</h2>
+
+            <form class="form" action="#" method="post">
+              <div class="form-row">
+                <label for="fullName">Full name</label>
+                <input id="fullName" name="fullName" type="text" required />
+              </div>
+
+              <div class="form-row">
+                <label for="email">Carleton email</label>
+                <input id="email" name="email" type="email" required placeholder="name@cmail.carleton.ca" />
+              </div>
+
+              <div class="form-row">
+                <label for="program">Program / year</label>
+                <input id="program" name="program" type="text" required placeholder="e.g., BIT-IMD Year 1" />
+              </div>
+
+              <div class="form-row">
+                <label for="time">Preferred session time</label>
+                <select id="time" name="time" required>
+                  <option value="" selected disabled>Select one</option>
+                  <option>Weekdays (morning)</option>
+                  <option>Weekdays (afternoon)</option>
+                  <option>Weekdays (evening)</option>
+                  <option>Weekend</option>
+                </select>
+              </div>
+
+              <div class="form-row">
+                <label for="message">Message (optional)</label>
+                <textarea id="message" name="message" rows="4" placeholder="Any topics you want to focus on?"></textarea>
+              </div>
+
+              <button class="btn" type="submit">Submit</button>
+
+              <p class="muted form-note">
+                This form is for the course project (it won't send email).
+              </p>
+            </form>
+          </section>
+
+          <aside class="panel">
+            <h2>Contact info</h2>
+            <ul class="list">
+              <li><strong>Email:</strong> jason.zhang15@cmail.carleton.ca</li>
+              <li><strong>Location:</strong> Ottawa, ON</li>
+              <li><strong>Hours:</strong> Mon-Fri: 10am-6pm</li>
+            </ul>
+
+            <div class="divider" aria-hidden="true"></div>
+
+            <h2>What happens next?</h2>
+            <p>
+              After you sign up, you'll get a message with session options and the weekly format.
+            </p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 NorthStar Study Club • Ottawa, ON</p>
+      <p class="muted">IMD1005A course project.</p>
+    </div>
+  </footer>
+</body>
+</html>
