@@ -1,4 +1,3 @@
-console.log("script.js loaded ✅");
 console.log("JavaScript is connected!");
 
 document.addEventListener("DOMContentLoaded", function () {
