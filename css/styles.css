@@ -402,3 +402,13 @@ textarea:focus {
     align-items: flex-start;
   }
 }
+
+.form-success{
+  margin-top: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(120, 255, 180, 0.12);
+  border: 1px solid rgba(120, 255, 180, 0.25);
+}
