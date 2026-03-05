@@ -39,7 +39,7 @@
           <section aria-label="Join form">
             <h2>Sign-up form</h2>
 
-            <form class="form" action="#" method="post">
+            <form class="form" id="signupForm" novalidate>
               <div class="form-row">
                 <label for="fullName">Full name</label>
                 <input id="fullName" name="fullName" type="text" required />
@@ -72,6 +72,7 @@
               </div>
 
               <button class="btn" type="submit">Submit</button>
+              <p id="formSuccess"></p>
 
               <p class="muted form-note">
                 This form is for the course project (it won't send email).
@@ -105,5 +106,7 @@
       <p class="muted">IMD1005A course project.</p>
     </div>
   </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
