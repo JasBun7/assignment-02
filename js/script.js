@@ -11,8 +11,9 @@ document.addEventListener("DOMContentLoaded", function () {
     event.preventDefault();
 
     if (successEl) {
-      successEl.textContent = "Thanks for your interest in NorthStar Study Club!";
-    }
+    successEl.textContent = "Thanks for your interest in NorthStar Study Club!";
+    successEl.style.display = "block";
+}
 
     form.reset();
   });
