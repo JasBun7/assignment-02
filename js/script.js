@@ -1,16 +1,23 @@
 console.log("JavaScript is connected!");
 
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("signupForm");
-  if (!form) return; // only runs on contact page
+// Run only after the page is loaded
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector("#signupForm");
 
-  const successMsg = document.getElementById("formSuccess");
+  // If we're not on contact.html, form will be null (that's OK)
+  if (!form) return;
 
-  form.addEventListener("submit", function(event) {
-    event.preventDefault(); // stops page reload and prevents 405
+  const successEl = document.querySelector("#formSuccess");
 
-    if (successMsg) {
-      successMsg.textContent = "Thanks for your interest in NorthStar Study Club!";
+  form.addEventListener("submit", function (event) {
+    event.preventDefault(); // <-- THIS prevents 405 on GitHub Pages
+
+    // Simple "success" behavior for now
+    if (successEl) {
+      successEl.textContent = "Thanks! We'll get back to you soon.";
     }
+
+    // Optional: clear form after submit
+    form.reset();
   });
 });
