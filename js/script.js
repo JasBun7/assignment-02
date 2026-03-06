@@ -107,24 +107,17 @@ function setupForm() {
 }
 
 // 5) API fetch (index.html)
-function setupApiTip() {
-  const tipText = document.querySelector("#tipText");
-  const newTipBtn = document.querySelector("#newTipBtn");
+function setupBackToTop() {
+  const btn = document.querySelector("#backToTop");
+  if (!btn) return;
 
-  if (!tipText || !newTipBtn) return;
+  window.addEventListener("scroll", () => {
+    const show = window.scrollY > 300;
+    btn.classList.toggle("is-visible", show);
+  });
 
-  async function loadTip() {
-    tipText.textContent = "Loading tip...";
-    try {
-      const res = await fetch("https://dummyjson.com/quotes/random");
-      const data = await res.json();
-      tipText.textContent = `${data.quote} — ${data.author}`;
-    } catch (err) {
-      tipText.textContent = "Could not load a tip right now. Please try again.";
-    }
-  }
-
-  newTipBtn.addEventListener("click", loadTip);
-  loadTip();
+  btn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 }
 
