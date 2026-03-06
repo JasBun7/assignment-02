@@ -124,7 +124,7 @@ function setupApiTip() {
       }
 
       const data = await res.json();
-      tipText.textContent = `${data.quote} — ${data.author}`;
+      tipText.textContent = `${data.quote} - ${data.author}`;
     } catch (error) {
       tipText.textContent = "Could not load a tip right now. Please try again.";
     }
