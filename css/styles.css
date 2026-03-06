@@ -480,3 +480,25 @@ display:block;
 .show-message{
   display:block;
 }
+
+.filter-row{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin:20px 0;
+}
+
+.filter-btn{
+  padding:8px 14px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,0.15);
+  background:transparent;
+  color:white;
+  cursor:pointer;
+}
+
+.active-filter{
+  background:linear-gradient(90deg, #7c5cff, #58c6ff);
+  color:black;
+  font-weight:600;
+}

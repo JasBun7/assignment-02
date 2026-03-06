@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setupAccordion();
   setupForm();
   setupApiTip();
+  setupResources();
 });
 
 // 1) Hamburger menu
@@ -132,5 +133,83 @@ function setupApiTip() {
 
   newTipBtn.addEventListener("click", loadTip);
   loadTip();
+}
+
+function setupResources() {
+  const cardContainer = document.querySelector("#resourceCards");
+  const filterButtons = document.querySelectorAll(".filter-btn");
+
+  if (!cardContainer || !filterButtons.length) return;
+
+  const resources = [
+    {
+      title: "Weekly Planner",
+      category: "Planning",
+      description: "Map out your readings, deadlines, and weekly study goals."
+    },
+    {
+      title: "Task Breakdown",
+      category: "Planning",
+      description: "Turn large assignments into smaller, manageable steps."
+    },
+    {
+      title: "Pomodoro Timer",
+      category: "Focus",
+      description: "Use short focus sessions and breaks to stay productive."
+    },
+    {
+      title: "Quiet Study Playlist",
+      category: "Focus",
+      description: "Background music to help reduce distractions while studying."
+    },
+    {
+      title: "Flashcard Review",
+      category: "Review",
+      description: "Practice key terms and definitions before quizzes and tests."
+    },
+    {
+      title: "End-of-Week Check-in",
+      category: "Review",
+      description: "Review what you finished and plan what comes next."
+    }
+  ];
+
+  function renderCards(category) {
+    cardContainer.innerHTML = "";
+
+    let filteredResources = resources;
+
+    if (category !== "All") {
+      filteredResources = resources.filter((resource) => resource.category === category);
+    }
+
+    filteredResources.forEach((resource) => {
+      const card = document.createElement("article");
+      card.className = "card";
+
+      card.innerHTML = `
+        <h3>${resource.title}</h3>
+        <p><strong>Category:</strong> ${resource.category}</p>
+        <p>${resource.description}</p>
+      `;
+
+      cardContainer.appendChild(card);
+    });
+  }
+
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const category = button.dataset.category;
+
+      filterButtons.forEach((btn) => {
+        btn.classList.remove("active-filter");
+      });
+
+      button.classList.add("active-filter");
+      renderCards(category);
+    });
+  });
+
+  renderCards("All");
 }
 
