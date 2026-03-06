@@ -107,17 +107,30 @@ function setupForm() {
 }
 
 // 5) API fetch (index.html)
-function setupBackToTop() {
-  const btn = document.querySelector("#backToTop");
-  if (!btn) return;
+function setupApiTip() {
+  const tipText = document.querySelector("#tipText");
+  const newTipBtn = document.querySelector("#newTipBtn");
 
-  window.addEventListener("scroll", () => {
-    const show = window.scrollY > 300;
-    btn.classList.toggle("is-visible", show);
-  });
+  if (!tipText || !newTipBtn) return;
 
-  btn.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
+  async function loadTip() {
+    tipText.textContent = "Loading...";
+
+    try {
+      const res = await fetch("https://dummyjson.com/quotes/random");
+
+      if (!res.ok) {
+        throw new Error("Failed to fetch quote");
+      }
+
+      const data = await res.json();
+      tipText.textContent = `${data.quote} — ${data.author}`;
+    } catch (error) {
+      tipText.textContent = "Could not load a tip right now. Please try again.";
+    }
+  }
+
+  newTipBtn.addEventListener("click", loadTip);
+  loadTip();
 }
 
