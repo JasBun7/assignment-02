@@ -1,4 +1,4 @@
-# Assignment 03 — Interactive Website Features
+# Assignment 03 - Interactive Website Features
 
 **Name:** Jason Zhang  
 **Student Number:** 101379014  
@@ -19,9 +19,9 @@ NorthStar Study Club is a simple website designed to help first-year university 
 
 The site contains three pages:
 
-Home – introduction and resources  
-About – explanation of how the study club works  
-Join – a sign-up form for students  
+Home - introduction and resources  
+About - explanation of how the study club works  
+Join - a sign-up form for students  
 
 This assignment expands the previous website by adding interactive JavaScript features.
 
