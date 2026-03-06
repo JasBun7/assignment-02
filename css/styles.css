@@ -464,3 +464,15 @@ margin-bottom:10px;
 .acc-panel.show{
 display:block;
 }
+
+#backToTop.is-visible{
+  display:block;
+}
+
+.acc-panel.is-open{
+  display:block;
+}
+
+.show-message{
+  display:block;
+}

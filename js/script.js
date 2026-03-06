@@ -116,16 +116,15 @@ function setupApiTip() {
   async function loadTip() {
     tipText.textContent = "Loading tip...";
     try {
-      const res = await fetch("https://api.adviceslip.com/advice", { cache: "no-store" });
+      const res = await fetch("https://dummyjson.com/quotes/random");
       const data = await res.json();
-      tipText.textContent = data.slip.advice;
+      tipText.textContent = `${data.quote} — ${data.author}`;
     } catch (err) {
       tipText.textContent = "Could not load a tip right now. Please try again.";
     }
   }
 
   newTipBtn.addEventListener("click", loadTip);
-
   loadTip();
 }
 
