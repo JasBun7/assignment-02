@@ -15,7 +15,8 @@
         <span class="brand-text">NorthStar Study Club</span>
       </a>
 
-      <nav class="site-nav" aria-label="Main navigation">
+      <button id="navToggle" class="nav-toggle">☰</button>
+      <nav class="site-nav" id="siteNav">
         <a class="nav-link is-active" href="index.html">Home</a>
         <a class="nav-link" href="about.html">About</a>
         <a class="nav-link" href="contact.html">Join</a>
@@ -113,6 +114,15 @@
         </div>
       </div>
     </section>
+
+    <!-- Assignment 03: API Study Tip -->
+    <section class="section">
+      <div class="container">
+        <h2>Study Tip</h2>
+        <p id="tipText">Loading...</p>
+        <button id="newTipBtn" class="btn" type="button">New Tip</button>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -126,6 +136,7 @@
     </div>
   </footer>
 
-<script src="./js/script.js"></script>
+  <button id="backToTop">↑</button>
+  <script src="./js/script.js"></script>
 </body>
 </html>
