@@ -447,16 +447,12 @@ textarea:focus {
   background: white;
   color: black;
   cursor: pointer;
-  display: none;
+  display: none !important;
   z-index: 1000;
 }
 
 #backToTop.is-visible{
-  display: block;
-}
-
-#backToTop.show{
-display:block;
+  display: block !important;
 }
 
 #formError{
